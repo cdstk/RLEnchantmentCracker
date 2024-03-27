@@ -1185,6 +1185,15 @@ public class EnchCrackerWindow extends StyledFrameMinecraft {
 		Insets i2 = rootPane.getBorder().getBorderInsets(this);
 		setSize(i.left + i.right + findSeedPanel.getSize().width + i2.left + i2.right, i.top + i.bottom + findSeedPanel.getSize().height + i2.top + i2.bottom);
 		setLocationRelativeTo(null);
+
+		// cdstk was here
+		JButton exportCurrEncBtn = new JButton();
+		exportCurrEncBtn.setText("Export Current Enchants");
+		aboutPane.add(exportCurrEncBtn);
+		exportCurrEncBtn.addActionListener(event -> {
+			CurrentEnchantmentsExporter export = new CurrentEnchantmentsExporter(playerSeed, myEnchantments, itemIdCanHaveMatEnchTier);
+			export.export();
+		});
 	}
 
 	private void resetEnchantmentCalcLabels() {
