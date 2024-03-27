@@ -1,4 +1,13 @@
 # RLEnchantment Cracker
+This is a fork of the original RLEnchantment Cracker by Nischhelm. Will likely will never update past fullfilling my personal requirements.
+
+Changes:
++ Added an additional functionality where you can export all possible table enchants from the currently selected seed.
+
+Known Issues:
++ `gradlew build` Does not compile with Apache POI dependencies, temporary workaround is to use `gradlew run`
+
+# RLEnchantment Cracker
 Cracking the Player RNG in RLCraft and choosing your enchantments.
 
 Refer to original Readme in 
